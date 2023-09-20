@@ -1,14 +1,14 @@
-.color1 {color: #003127;}
-.color2 {color: #14cc86;}
-.color3 {color: #3a7545;}
-.color4 {color: #77a856;}
-.color5 {color: #cbe56b;}
+.color1 {color: #131417;}
+.color2 {color: #36373c;}
+.color3 {color: #65646c;}
+.color4 {color: #a09da2;}
+.color5 {color: #e0dee6;}
 
 
 
 :root {
-  --background-body: #14cc86;
-  --background: #000013;
+  --background-body: #a09da2;
+  --background: #e0dee6;
   --text-bright: #0083cd;
   --form-text: #fff;
   --text-main: #000
@@ -31,20 +31,7 @@ body {
 
 
 
-input {
-  color: #fff;
-  color: var(--form-text);
-  background-color: #161f27;
-  background-color: var(--background);
-  font-family: inherit;
-  font-size: inherit;
-  margin-right: 6px;
-  margin-bottom: 6px;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  outline: none;
-}
+
 
 button {
   color: #fff;

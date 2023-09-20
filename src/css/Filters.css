@@ -1,11 +1,11 @@
 .filters {
     margin: 15px;
+    width: 240px;
 }
 
 .filters div {
 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: aqua;
+    background-color: #65646c;
     margin-bottom: 3px !important;
     display: grid;
     text-align: center;
@@ -13,9 +13,46 @@
     margin: 0;
     padding: 0;
     gap: 32px;
-    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
     justify-items: center; 
     align-items: center; 
+    padding-bottom: 5px;
 }
+
+
+.filters .rating div{
+    display: block;
+}
+
+.priceRange {
+    display: block ;
+    font-size: medium;
+}
+
+.priceRange{
+    display: flex !important;
+    width: auto;
+}
+
+
+.priceRange input{
+    width: 50px;
+    
+}
+
+input {
+    color: #fff;
+    color: var(--form-text);
+    background-color: #69c298;
+    background-color: var(--background);
+    font-family: inherit;
+    font-size: inherit;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+  }
+
 

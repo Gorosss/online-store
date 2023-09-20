@@ -2,7 +2,7 @@
 
 
 .nav {
-    background-color:#003127;
+    background-color:#36373c;
     color:white;
 
     align-items: center;
@@ -46,3 +46,18 @@
 .nav li:hover{
    background-color:#0083cd;
 }
+
+.nav input {
+    color: #fff;
+    color: var(--form-text);
+    background-color: #69c298;
+    background-color: var(--background);
+    font-family: inherit;
+    font-size: inherit;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+  }

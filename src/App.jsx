@@ -4,7 +4,8 @@ import './css/Navbar.css'
 import './css/Products.css'
 import './css/Filters.css'
 import { ShopCartIcon , FavoriteIcon} from './img/icons.jsx'
-import Products from './components/Products.jsx'
+import Products from './components/products.jsx'
+
 import Filters from './components/Filters.jsx'
 
 
