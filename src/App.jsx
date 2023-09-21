@@ -39,12 +39,9 @@ function App() {
             </form>
           </div>
           <div className=''>
-          <button>
-              <FavoriteIcon />
-            </button>
-            <button>
-              {/* <Cart /> */}
-            </button>
+                     
+              { <Cart /> }
+            
           </div>
         </div>
       </header>
