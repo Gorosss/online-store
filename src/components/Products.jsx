@@ -1,10 +1,8 @@
-import productsJSON from '../json/products.json'
 import { StarIcon , AddToCartIcon , AddToFavoriteIcon } from '../img/icons.jsx'
 
 export function ProductsResult({ products }) {
 
-    console.log(products)
-
+    
     return (
         products.map (product => (
 
@@ -45,22 +43,21 @@ export function ProductsResult({ products }) {
 
 export function NoProductsResult() {
 
-    console.log(productsJSON)
 
     return (
         <h1>There is not products for this search</h1>
     )
 }
 
-export function Products() {
+export function Products({products}) {
 
-    const hasProducts = productsJSON.products.length > 0
+    const hasProducts = products.length > 0
 
     return (
 
         hasProducts ? (
             
-                <ProductsResult products={productsJSON.products}/>
+                <ProductsResult products={products}/>
            
         ) :
             <NoProductsResult />

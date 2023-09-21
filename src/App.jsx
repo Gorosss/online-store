@@ -1,17 +1,28 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './css/App.css'
 import './css/Navbar.css'
 import './css/Products.css'
 import './css/Filters.css'
 import { ShopCartIcon , FavoriteIcon} from './img/icons.jsx'
 import Products from './components/products.jsx'
-
+import {FiltersContext} from './context/filters.jsx'
+import Cart from './components/Cart'
 import Filters from './components/Filters.jsx'
 
+
+import productsJSON from './json/products.json'
+
+import {useFilters} from './hooks/useFilters.jsx'
 
 
 
 function App() {
+
+  
+ 
+  const [products] = useState(productsJSON.products)
+  const {filterProducts, setFilters} = useFilters()
+  const filteredProducts = filterProducts(products)
 
   return (
     <div className='page'>
@@ -27,12 +38,12 @@ function App() {
               <button type='submit'> Search </button>
             </form>
           </div>
-          <div className='search'>
+          <div className=''>
           <button>
               <FavoriteIcon />
             </button>
             <button>
-              <ShopCartIcon />
+              {/* <Cart /> */}
             </button>
           </div>
         </div>
@@ -40,10 +51,10 @@ function App() {
 
       <main>
         <div className='filters'>
-          <Filters />
+          <Filters setFilters={setFilters}/>
         </div>
         <div className='products'>
-          < Products />
+          < Products products={filteredProducts}/>
         </div>
       </main>
     </div>
