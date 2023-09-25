@@ -3,12 +3,12 @@ import './css/App.css'
 import './css/Navbar.css'
 import './css/Products.css'
 import './css/Filters.css'
-import { ShopCartIcon , FavoriteIcon} from './img/icons.jsx'
+import { ShopCartIcon } from './img/icons.jsx'
 import Products from './components/products.jsx'
 import {FiltersContext} from './context/filters.jsx'
 import Cart from './components/Cart'
 import Filters from './components/Filters.jsx'
-
+import { CartProvider } from './context/cart'
 
 import productsJSON from './json/products.json'
 
@@ -25,7 +25,7 @@ function App() {
   const filteredProducts = filterProducts(products)
 
   return (
-    <div className='page'>
+    <CartProvider className='page'>
 
       <header>
         <div className='nav'>
@@ -54,7 +54,7 @@ function App() {
           < Products products={filteredProducts}/>
         </div>
       </main>
-    </div>
+    </CartProvider>
   )
 }
 

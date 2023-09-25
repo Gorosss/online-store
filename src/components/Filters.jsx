@@ -51,7 +51,7 @@ export function Filters() {
     return (
         <>
             <div className='search'>
-                <label>Searc product</label>
+                <label>Search product</label>
                 <input onChange={handleChangeSearch} placeholder='' />
             </div>
 

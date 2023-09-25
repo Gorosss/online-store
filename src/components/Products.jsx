@@ -1,7 +1,12 @@
-import { StarIcon , AddToCartIcon , AddToFavoriteIcon } from '../img/icons.jsx'
+import { StarIcon , AddToCartIcon  } from '../img/icons.jsx'
+
+import { useCart } from '../hooks/useCart.jsx'
 
 export function ProductsResult({ products }) {
 
+    const {addCart, cart} = useCart()
+
+    console.log(cart)
     
     return (
         products.map (product => (
@@ -26,10 +31,8 @@ export function ProductsResult({ products }) {
                 </div>
 
                 <div className='addTo'>
-                    <button className='addToFavorite'>
-                        <AddToFavoriteIcon/>
-                    </button>
-                    <button className='addToCart'>
+                   
+                    <button className='addToCart' onClick={() => addCart(product)}>
                         <AddToCartIcon/>
                     </button>
                 </div>
