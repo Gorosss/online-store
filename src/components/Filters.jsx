@@ -2,13 +2,15 @@
 import { useState } from 'react'
 import { FiveStarIcon , FourStarIcon , ThreeStarIcon , TwoStarIcon , OneStarIcon } from '../img/icons.jsx'
 import { useFilters } from '../hooks/useFilters.jsx'
+import categoriesJSON from '../json/Categories.json'
+
+import Categories from './Categories.jsx'
 
 export function Filters() {
 
 
     const { filters, setFilters } = useFilters()
     
-
 
       const handleChangeSearch = (ev) => {
         setFilters(prevState => ({
@@ -41,13 +43,6 @@ export function Filters() {
             category: ev.target.value
         }))
       }
-      const handleChangeBrand = (ev) => {
-        setFilters(prevState => ({
-            ...prevState,
-            brand: ev.target.value
-        }))
-      }
-
     return (
         <>
             <div className='search'>
@@ -72,15 +67,13 @@ export function Filters() {
                 </div>
             </div>
 
-            <div className='category'>
+            <div className='categories'>
                 <label>Category</label>
-                <input onChange={handleChangeCategory} placeholder='' />
+                <div className='categoriesList'>
+                    <Categories categoriesJSON={categoriesJSON}/>
+                </div>
             </div>
 
-            <div className='brand'>
-                <label>Brand</label>
-                <input onChange={handleChangeBrand} placeholder='' />
-            </div>
         </>
     )
 }

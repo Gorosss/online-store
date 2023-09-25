@@ -3,7 +3,7 @@
     width: 240px;
 }
 
-.filters div {
+.filters .rating , .filters .priceFilter , .filters .search {
 
     background-color: #65646c;
     margin-bottom: 3px !important;
@@ -56,3 +56,23 @@ input {
   }
 
 
+  .filters .categories {
+    text-align: center;
+    list-style: none;
+    background-color: #65646c;
+  }
+
+
+  .filters .categories .categoriesList{
+    
+
+    
+    margin-bottom: 3px !important;
+    list-style: none;
+    text-align: left;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+
+}
