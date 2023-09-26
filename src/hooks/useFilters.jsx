@@ -6,20 +6,21 @@ export function useFilters () {
    
 
     const {filters, setFilters }= useContext(FiltersContext)
+
+    const regexPattern = new RegExp(filters.productName, 'i');
   
     const filterProducts = (products) => {
       return products.filter(product => {
           return(
-             
-            (filters.productName === '' || filters.productName === product.title) && 
+            (filters.productName === '' ||  (regexPattern.test(product.title) || regexPattern.test(product.description))) && 
             (product.price >= filters.minPrice && product.price <= filters.maxPrice) &&
             (product.rating >= filters.minRating) &&
-            (filters.category === 'all' || filters.category === product.category) && 
+            (filters.category.length === 0 || filters.category.includes(product.category)) && 
             (filters.brand === '' || filters.brand === product.brand) 
           )
       })
     }
-    return {filterProducts, setFilters}
+    return {filterProducts, setFilters , filters}
   }
 
 export default useFilters

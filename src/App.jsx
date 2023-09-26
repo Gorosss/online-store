@@ -18,11 +18,20 @@ import {useFilters} from './hooks/useFilters.jsx'
 
 function App() {
 
-  
+
  
   const [products] = useState(productsJSON.products)
   const {filterProducts, setFilters} = useFilters()
   const filteredProducts = filterProducts(products)
+
+
+  const handleChangeSearch = (ev) => {
+    setFilters(prevState => ({
+        ...prevState,
+        productName: ev.target.value
+    }))
+  }
+
 
   return (
     <CartProvider className='page'>
@@ -34,7 +43,7 @@ function App() {
           </div>
           <div className='search'>
             <form className='form' onSubmit={null}>
-              <input onChange={null} placeholder='Find' />
+              <input onChange={handleChangeSearch} placeholder='Find' />
               <button type='submit'> Search </button>
             </form>
           </div>

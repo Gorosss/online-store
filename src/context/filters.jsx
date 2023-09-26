@@ -10,7 +10,7 @@ export function FiltersProvider( {children} ){
         minPrice: 0,
         maxPrice: 9999,
         minRating: 0,
-        category: 'all',
+        category: [],
         brand: ''
       })
 
