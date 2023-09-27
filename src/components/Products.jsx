@@ -1,17 +1,24 @@
-import { StarIcon , AddToCartIcon  } from '../img/icons.jsx'
+import { StarIcon, AddToCartIcon } from '../img/icons.jsx'
 
 import { useCart } from '../hooks/useCart.jsx'
 
 export function ProductsResult({ products }) {
 
-    const {addCart, cart} = useCart()
+    const { addCart, cart } = useCart()
 
     console.log(cart)
-    
-    return (
-        products.map (product => (
 
-            <div className= 'product' id= {product.id}>
+    const productInCart = product => {
+        return cart.find(p => p.id === product.id)
+    }
+
+    return (
+        products.map(product => {
+
+            const isInCart = productInCart(product)
+
+
+            return (<div className='product' id={product.id}>
                 <div className='imgDiv'>
                     <img src={product.thumbnail} alt={product.title} />
                 </div>
@@ -31,15 +38,30 @@ export function ProductsResult({ products }) {
                 </div>
 
                 <div className='addTo'>
-                   
-                    <button className='addToCart' onClick={() => addCart(product)}>
-                        <AddToCartIcon/>
-                    </button>
+                    {
+                        isInCart ?
+                            (
+                            <>
+                                <button style={{ backgroundColor: 'blue' }} className='addToCart' onClick={() => addCart(product)}>
+                                    <AddToCartIcon />
+                                </button>
+                                <span>Qty: {isInCart.quantity}</span>
+                            </>
+                            )
+                            :
+                            (<button className='addToCart' onClick={() => addCart(product)}>
+                                <AddToCartIcon />
+                            </button>)
+
+
+                    }
+
                 </div>
             </div>
+            )
 
 
-        ))
+        })
     )
 }
 
@@ -52,16 +74,16 @@ export function NoProductsResult() {
     )
 }
 
-export function Products({products}) {
+export function Products({ products }) {
 
     const hasProducts = products.length > 0
 
     return (
 
         hasProducts ? (
-            
-                <ProductsResult products={products}/>
-           
+
+            <ProductsResult products={products} />
+
         ) :
             <NoProductsResult />
     )
