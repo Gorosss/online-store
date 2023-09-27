@@ -23,8 +23,7 @@ export function CartProvider ({children}){
         ]))
     }
 
-    const removeFromCart = product =>{
-        console.log(product.quantity)
+    const removeOneFromCart = product =>{
 
         if(product.quantity > 1){
 
@@ -37,6 +36,11 @@ export function CartProvider ({children}){
         setCart(cart.filter(p => p.id != product.id))
     }
 
+    const removeFromCart = product =>{
+
+        setCart(cart.filter(p => p.id != product.id))
+    }
+
     const clearCart = () => {
         setCart([])
     }
@@ -45,6 +49,7 @@ export function CartProvider ({children}){
         <CartContext.Provider value={{
             cart,
             addCart,
+            removeOneFromCart,
             removeFromCart,
             clearCart}
         }>

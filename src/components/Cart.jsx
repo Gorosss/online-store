@@ -8,7 +8,7 @@ import { useCart } from '../hooks/useCart.jsx'
 
 import { StarIcon, AddToCartIcon } from '../img/icons.jsx'
 
-export function CartProduct({ addCart, removeFromCart, thumbnail, title, rating, price, quantity }) {
+export function CartProduct({ addCart, removeFromCart,removeOneFromCart, thumbnail, title, rating, price, quantity }) {
 
 
     return (
@@ -37,10 +37,12 @@ export function CartProduct({ addCart, removeFromCart, thumbnail, title, rating,
                 <button className='' onClick={addCart}>
                     +
                 </button>
-                <button className='' onClick={removeFromCart}>
+                <button className='' onClick={removeOneFromCart}>
                     -
                 </button>
-
+                <button className='' onClick={removeFromCart}>
+                    Delete Item
+                </button>
             </div>
         </div>
     )
@@ -55,7 +57,7 @@ export function Cart() {
 
     const cartCheckBoxId = useId()
 
-    const { addCart, cart, clearCart, removeFromCart } = useCart()
+    const { addCart, cart, clearCart, removeFromCart , removeOneFromCart} = useCart()
 
 
 
@@ -72,9 +74,9 @@ export function Cart() {
             <aside className='cart'>
                 {
                     cart.map(product => (
-                        <CartProduct key={product.id} addCart={() => addCart(product)} removeFromCart={() => removeFromCart(product)}{...product} />
+                        <CartProduct key={product.id} addCart={() => addCart(product)} removeFromCart={() => removeFromCart(product)} removeOneFromCart={() => removeOneFromCart(product)}{...product} />
 
-
+                        
                     ))}
                 <hr />
                 <button className='clearButton' onClick={clearCart}>Clear</button>   
