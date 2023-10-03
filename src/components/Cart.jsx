@@ -13,7 +13,7 @@ export function CartProduct({ addCart, removeFromCart,removeOneFromCart, thumbna
 
     return (
 
-        <div >
+        <div className='cartProduct'>
 
             <div className=''>
                 <img src={thumbnail} alt={title} />

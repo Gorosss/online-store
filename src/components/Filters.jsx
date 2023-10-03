@@ -97,7 +97,7 @@ export function Filters() {
 
             <div className='priceFilter'>
                 <label>Price range</label>
-                <div className='priceRange'> <input onChange={handleChangeMinPrice} placeholder='' /> -  <input onChange={handleChangeMaxPrice} placeholder='' /></div>
+                <div className='priceRange'> <input onChange={handleChangeMinPrice} placeholder='' /> -      <input onChange={handleChangeMaxPrice} placeholder='' /></div>
                 
             </div>
 
@@ -114,7 +114,7 @@ export function Filters() {
             <div className='categories'>
                 <label>Category</label>
                 <div className='categoriesList'>
-                    <Categories categoriesJSON={categoriesJSON} handleChangeCategory={handleChangeCategory}/>
+                    <Categories categoriesJSON={categoriesJSON} handleChangeCategory={handleChangeCategory}  filterCategory={filters.category}/>
                 </div>
             </div>
 

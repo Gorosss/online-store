@@ -1,19 +1,9 @@
 
 
-export function Categories ({ categoriesJSON , handleChangeCategory}) {
+export function Categories ({ categoriesJSON , handleChangeCategory, filterCategory}) {
 
     const categories =  categoriesJSON
 
-    const handleChageCheckBox = (ev)=>{
-        const inputElement = ev.target.previousSibling.previousSibling;
-        console.log(inputElement.value)
-
-    if (inputElement && inputElement.tagName === 'INPUT') {
-      inputElement.checked = !inputElement.checked;
-      const event = new Event('change', { bubbles: true, cancelable: true });
-      inputElement.dispatchEvent(event);
-    } 
-    }
 
     return(
         <>
@@ -21,7 +11,7 @@ export function Categories ({ categoriesJSON , handleChangeCategory}) {
         categories.map((category, index) => (
             
             <div className='category'> 
-                <input type="checkbox" name={category} onChange={handleChangeCategory}/> <a name={category} onClick={handleChangeCategory}>{category}</a>
+                <input type="checkbox" name={category} onChange={handleChangeCategory} checked={filterCategory.includes(category)}/> <a name={category} onClick={handleChangeCategory}>{category}</a>
             </div>
             
         ))

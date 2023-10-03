@@ -1,3 +1,12 @@
+
+:root {
+    --background-body: #a09da2;
+    --background: #e0dee6;
+    --text-bright: #0083cd;
+    --form-text: #0e0d0d;
+    --text-main: #000
+  }
+
 .filters {
     margin: 15px;
     width: 240px;
@@ -5,9 +14,10 @@
 
 .filters .rating , .filters .priceFilter , .filters .search {
 
-    background-color: #65646c;
+    background-color: rgb(186, 232, 232);
     margin-bottom: 3px !important;
     display: grid;
+    gap: 5px !important;
     text-align: center;
     list-style: none;
     margin: 0;
@@ -25,8 +35,9 @@
 }
 
 .priceRange {
-    display: block ;
     font-size: medium;
+    text-align: center;
+    align-items: center;
 }
 
 .priceRange{
@@ -47,11 +58,10 @@ input {
     background-color: var(--background);
     font-family: inherit;
     font-size: inherit;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    padding: 10px;
+    margin: 6px;
+    padding: 8px;
     border: none;
-    border-radius: 6px;
+    border-radius: 3px;
     outline: none;
   }
 
@@ -59,7 +69,7 @@ input {
   .filters .categories {
     text-align: center;
     list-style: none;
-    background-color: #65646c;
+    background-color: rgb(186, 232, 232);
   }
 
 
@@ -75,4 +85,19 @@ input {
     padding: 0;
     padding-bottom: 5px;
 
+}
+
+.categoriesList:hover a, .categoriesList:hover input{
+    text-decoration: underline; /* Subraya el texto */
+    cursor: pointer; /* Cambia el cursor a un ícono de apuntador */
+  }
+
+.filters label{
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+
+.categoriesList{
+    margin-left: 10px !important;
 }
