@@ -87,7 +87,7 @@ input {
 
 }
 
-.categoriesList:hover a, .categoriesList:hover input{
+.category:hover a, .category:hover input{
     text-decoration: underline; /* Subraya el texto */
     cursor: pointer; /* Cambia el cursor a un ícono de apuntador */
   }

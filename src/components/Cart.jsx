@@ -6,7 +6,7 @@ import '../css/Cart.css'
 import { useCart } from '../hooks/useCart.jsx'
 
 
-import { StarIcon, AddToCartIcon } from '../img/icons.jsx'
+import { StarIcon, RubbishBinIcon } from '../img/icons.jsx'
 
 export function CartProduct({ addCart, removeFromCart,removeOneFromCart, thumbnail, title, rating, price, quantity }) {
 
@@ -15,34 +15,38 @@ export function CartProduct({ addCart, removeFromCart,removeOneFromCart, thumbna
 
         <div className='cartProduct'>
 
-            <div className=''>
+            <div className='imgDiv'>
                 <img src={thumbnail} alt={title} />
             </div>
-            <div className=''>
-                <span className=''>{title} </span>
+            <div className='productInfo'>
+                <span className='title'>{title} </span>
             </div>
-            <div className=''>
+            <div className='rating'>
                 <span>
                     {rating}
                 </span>
                 <StarIcon />
             </div>
-            <div className=''>
+            <div className='price'>
                 <span>{price}</span>
-                <span className=''>€</span>
+                <span className='euroSimbol'>€</span>
             </div>
 
-            <div className=''>
+            <div className='quantity'>
                 <span>Qty: {quantity} </span>
-                <button className='' onClick={addCart}>
+                <button onClick={addCart}>
                     +
                 </button>
-                <button className='' onClick={removeOneFromCart}>
+                <button onClick={removeOneFromCart}>
                     -
                 </button>
-                <button className='' onClick={removeFromCart}>
-                    Delete Item
+                
+            </div>
+            <div className='rubbishBinIcon'>
+                    <button  onClick={removeFromCart}>
+                    <RubbishBinIcon />
                 </button>
+            
             </div>
         </div>
     )
@@ -79,7 +83,12 @@ export function Cart() {
                         
                     ))}
                 <hr />
-                <button className='clearButton' onClick={clearCart}>Clear</button>   
+
+                <div className='clearButton'>  
+                    <button onClick={clearCart}>Clear</button>   
+
+                
+                </div>
             </aside>
         </>
     )

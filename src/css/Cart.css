@@ -34,7 +34,7 @@
     align-items: center;
     border-radius: 9999px;
     cursor: pointer;
-    display: flex;
+    display: block;
     height: 32px;
     justify-content: center;
     position: absolute;
@@ -61,10 +61,64 @@
 
 .cartProduct {
     width: 100%;
-    height: 40%; 
+    height: 337px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 8px!important;
     background-color: rgb(255, 255, 255); 
     margin-bottom: 20px;
 }
+
+.clearButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.productInfo {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .title {
+    font-weight: bold;
+  }
+
+  .rating{
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .quantity,.rubbishBinIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  
+
+  .rating span, .quantity span {
+    padding-right: 3px;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: xx-large;
+  }
+
+  .price .euroSimbol {
+    font-weight: normal;
+    font-size: small;
+  }
+
+   .productInfo,  .rating , .price, .rubbishBinIcon, .quantity{
+    margin: 5px;
+  }
+  

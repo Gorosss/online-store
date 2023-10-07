@@ -1,5 +1,10 @@
 
+.nav .logo {
+    font-weight:bolder;
+    font-family: Cursive;
+    font-size: xx-large;
 
+}
 
 .nav {
     background-color:rgb(44, 105, 141);
