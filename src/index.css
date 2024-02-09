@@ -7,7 +7,7 @@
 
 
 :root {
-  --background-body: rgb(227, 246, 245);
+  --background-body: #f3f3f3;
   --background: rgb(227, 246, 245);
   --text-bright: #0083cd;
   --form-text: #0e0d0d;
