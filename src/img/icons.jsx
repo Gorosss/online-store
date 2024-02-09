@@ -39,7 +39,7 @@ export function FiveStarIcon() {
             clipRule="evenodd"
             strokeLinejoin="round"
             strokeMiterlimit={2}
-            width='100' height='20'
+            width='100' height='15'
         >
             <path
                 d="M702.68 382.568l16.041 49.37h51.911l-41.997 30.512 16.042 49.37-41.997-30.512-41.997 30.512 16.041-49.37-41.996-30.512h51.911l16.041-49.37z"
@@ -79,7 +79,7 @@ export function FourStarIcon() {
             clipRule="evenodd"
             strokeLinejoin="round"
             strokeMiterlimit={2}
-            width='100' height='20'
+            width='100' height='15'
         >
             <path
                 d="M702.68 382.568l16.041 49.37h51.911l-41.997 30.512 16.042 49.37-41.997-30.512-41.997 30.512 16.041-49.37-41.996-30.512h51.911l16.041-49.37z"
@@ -119,7 +119,7 @@ export function ThreeStarIcon() {
             clipRule="evenodd"
             strokeLinejoin="round"
             strokeMiterlimit={2}
-            width='100' height='20'
+            width='100' height='15'
         >
             <path
                 d="M702.68 382.568l16.041 49.37h51.911l-41.997 30.512 16.042 49.37-41.997-30.512-41.997 30.512 16.041-49.37-41.996-30.512h51.911l16.041-49.37z"
@@ -159,7 +159,7 @@ export function TwoStarIcon() {
             clipRule="evenodd"
             strokeLinejoin="round"
             strokeMiterlimit={2}
-            width='100' height='20'
+            width='100' height='15'
         >
             <path
                 d="M702.68 382.568l16.041 49.37h51.911l-41.997 30.512 16.042 49.37-41.997-30.512-41.997 30.512 16.041-49.37-41.996-30.512h51.911l16.041-49.37z"
@@ -199,7 +199,7 @@ export function OneStarIcon() {
             clipRule="evenodd"
             strokeLinejoin="round"
             strokeMiterlimit={2}
-            width='100' height='20'
+            width='100' height='15'
         >
             <path
                 d="M702.68 382.568l16.041 49.37h51.911l-41.997 30.512 16.042 49.37-41.997-30.512-41.997 30.512 16.041-49.37-41.996-30.512h51.911l16.041-49.37z"
