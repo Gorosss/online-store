@@ -39,8 +39,8 @@ function App() {
       <header>
         <div className='nav'>
           <div className='logo'>
-            <img className='logoImg' src='/src/img/onlineStoreIcon.png' />
-            <img className='logoText' src='/src/img/nameOnlineStore.png' />
+            <img className='logoImg' src='/onlineStoreIcon.png' />
+            <img className='logoText' src='/nameOnlineStore.png' />
           </div>
           <div className='search'>
             <form className='form' onSubmit={null}>
