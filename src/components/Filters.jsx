@@ -104,10 +104,11 @@ export function Filters() {
             <div className='rating'>
                 <label>Rating</label>
                 <div>
-                    <span onClick={handleChangeRating4}>  <FourStarIcon/> or more</span>
-                    <span onClick={handleChangeRating3}> <ThreeStarIcon/> or more</span>
-                    <span onClick={handleChangeRating2}> <TwoStarIcon/> or more</span>
-                    <span onClick={handleChangeRating1}> <OneStarIcon/> or more</span>
+                    {console.log(filters.minRating)}
+                    <span onClick={handleChangeRating4} style={filters.minRating === 4 ? ({fontWeight : 'bold'}):{}}> <FourStarIcon/>or more</span>
+                    <span onClick={handleChangeRating3} style={filters.minRating === 3 ? ({fontWeight : 'bold'}):{}}> <ThreeStarIcon/>or more</span>
+                    <span onClick={handleChangeRating2} style={filters.minRating === 2 ? ({fontWeight : 'bold'}):{}}> <TwoStarIcon/>or more</span>
+                    <span onClick={handleChangeRating1} style={filters.minRating === 1 ? ({fontWeight : 'bold'}):{}}> <OneStarIcon/>or more</span>
                 </div>
             </div>
 
