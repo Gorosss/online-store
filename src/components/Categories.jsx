@@ -4,6 +4,17 @@ export function Categories ({ categoriesJSON , handleChangeCategory, filterCateg
 
     const categories =  categoriesJSON
 
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+
+    const categoriFormat = (category) => {
+
+
+        return capitalizeFirstLetter(category.replace('-', ' '))
+    }
+
 
     return(
         <>
@@ -11,7 +22,7 @@ export function Categories ({ categoriesJSON , handleChangeCategory, filterCateg
         categories.map((category, index) => (
             
             <div className='category'> 
-                <input type="checkbox" name={category} onChange={handleChangeCategory} checked={filterCategory.includes(category)}/> <a name={category} onClick={handleChangeCategory}>{category}</a>
+                <input type="checkbox" name={category} onChange={handleChangeCategory} checked={filterCategory.includes(category)}/> <a name={category} onClick={handleChangeCategory}>{categoriFormat(category)}</a>
             </div>
             
         ))

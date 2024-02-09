@@ -14,7 +14,7 @@
 
 .filters .rating , .filters .priceFilter , .filters .search {
 
-    background-color: rgb(186, 232, 232);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 3px !important;
     display: grid;
     gap: 5px !important;
@@ -69,8 +69,22 @@ input {
   .filters .categories {
     text-align: center;
     list-style: none;
-    background-color: rgb(186, 232, 232);
+    background-color: rgb(255, 255, 255);
   }
+
+  .rating span{
+    align-items: center;
+}
+
+  .rating span svg{
+    margin-right: 2px;
+}
+
+  .rating span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #c4ae22;
+}
 
 
   .filters .categories .categoriesList{
