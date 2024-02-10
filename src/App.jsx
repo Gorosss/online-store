@@ -13,6 +13,7 @@ import { CartProvider } from './context/cart'
 import productsJSON from './json/products.json'
 
 import {useFilters} from './hooks/useFilters.jsx'
+import Footer from './components/Footer.jsx'
 
 
 
@@ -64,8 +65,10 @@ function App() {
           < Products products={filteredProducts}/>
         </div>
       </main>
+      <Footer />
+  
     </CartProvider>
-  )
+    )
 }
 
 export default App

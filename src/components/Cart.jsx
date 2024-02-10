@@ -13,6 +13,10 @@ export function CartProduct({ addCart, removeFromCart,removeOneFromCart, thumbna
 
     return (
 
+        
+
+        
+        
         <div className='cartProduct'>
 
             <div className='imgDiv'>
@@ -49,6 +53,7 @@ export function CartProduct({ addCart, removeFromCart,removeOneFromCart, thumbna
             
             </div>
         </div>
+        
     )
 
 }
@@ -76,6 +81,9 @@ export function Cart() {
             <input id={cartCheckBoxId} type='checkbox' hidden />
 
             <aside className='cart'>
+                <label className='productPageCarButton' htmlFor={cartCheckBoxId}>
+                    <ShopCartIcon />
+            </label>
                 {
                     cart.map(product => (
                         <CartProduct key={product.id} addCart={() => addCart(product)} removeFromCart={() => removeFromCart(product)} removeOneFromCart={() => removeOneFromCart(product)}{...product} />
