@@ -115,3 +115,25 @@ input {
 .categoriesList{
     margin-left: 10px !important;
 }
+
+.category{
+    display: flex;
+    align-items: center;}
+
+.category input[type="checkbox"] {
+  display: grid;
+  place-content: center;
+}
+
+.category input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #1e1e1f;
+}
+
+.category input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}

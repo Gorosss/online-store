@@ -42,7 +42,7 @@ export function ProductsResult({ products }) {
                         isInCart ?
                             (
                             <>
-                                <button style={{ backgroundColor: 'rgb(44, 105, 141)' }} className='addToCart' onClick={() => addCart(product)}>
+                                <button style={{ backgroundColor: 'rgb(131 191 228)' }} className='addToCart' onClick={() => addCart(product)}>
                                     <AddToCartIcon />
                                 </button>
                                 <span>Qty: {isInCart.quantity}</span>
