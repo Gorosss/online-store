@@ -1,5 +1,9 @@
 # Online store
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Gorosss/online-store/blob/main/README-EN.md)
+
+## Información
+
 Un proyecto de comercio electrónico sencillo que he desarrollado para practicar React utilizando Vite, con el objetivo de mejorar mis habilidades de desarrollo web. En este proceso, también he utilizado tecnologías como CSS para perfeccionar aspectos relacionados con el diseño y la presentación visual de la aplicación.
 
 
