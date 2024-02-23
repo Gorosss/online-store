@@ -1,8 +1,11 @@
-# React + Vite
+# Online store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Gorosss/online-store/blob/main/README-EN.md)
 
-Currently, two official plugins are available:
+## Información
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Un proyecto de comercio electrónico sencillo que he desarrollado para practicar React utilizando Vite, con el objetivo de mejorar mis habilidades de desarrollo web. En este proceso, también he utilizado tecnologías como CSS para perfeccionar aspectos relacionados con el diseño y la presentación visual de la aplicación.
+
+
+
+![onlineStoreImage](https://github.com/Gorosss/online-store/assets/90179487/86cc7b8f-7b48-4f24-8c91-02f06fc08e5d)
