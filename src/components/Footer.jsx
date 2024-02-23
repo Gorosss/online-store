@@ -13,7 +13,7 @@ export function Footer() {
                     className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
                 >
                     <li>
-                        <a href="#sobre_mi" className="hover:underline me-4 md:me-6">Sobre mi</a>
+                        <a href="https://www.jgorostegui.software/" className="hover:underline me-4 md:me-6">Sobre mi</a>
                     </li>
                     <li>
                         <a href="mailto:jongorostegui@gmail.com" className="hover:underline">Contacto</a>
